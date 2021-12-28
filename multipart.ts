@@ -128,7 +128,7 @@ async function* parts(
   async function getFile(contentType: string): Promise<[string, Deno.File]> {
     const ext = extension(contentType);
     if (!ext) {
-      throw new httpErrors.BadRequest(`Invalid media type for part: ${contentType}`);
+//      throw new httpErrors.BadRequest(`Invalid media type for part: ${contentType}`);
     }
     if (!outPath) {
       outPath = await Deno.makeTempDir();
